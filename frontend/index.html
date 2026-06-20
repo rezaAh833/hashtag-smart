@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Hashtag Smart | هشتگ یار</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- مودال "به زودی" -->
+  <div id="comingSoonModal" class="modal-overlay">
+    <div class="modal-box">
+      <h2> به زودی</h2>
+      <p>بخش انگلیسی به زودی در دسترس خواهد بود.</p>
+      <p style="font-size: 0.85rem;">لطفاً فعلاً از بخش فارسی استفاده کنید.</p>
+      <button class="modal-btn" onclick="closeModal()">باشه، متوجه شدم</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="dark-mode-toggle">
+      <button id="darkModeButton">🌙 حالت تاریک</button>
+    </div>
+
+    <div class="hero">
+      <div class="site-brand">هشتگ یار</div>
+      <h1>هشتگ مناسب محتوایت را پیدا کن</h1>
+      <p class="subtitle">هشتگ‌های فارسی را بر اساس موضوع محتوا و سطح رقابت مشاهده کن.</p>
+    </div>
+
+    <div class="card input-card">
+      <div class="form-group" style="margin-bottom: 1.2rem;">
+        <label> جستجوی سریع در دسته‌ها و زیردسته‌ها</label>
+        <div style="position: relative;">
+          <input type="text" id="searchCategoryInput" placeholder="جستجو کن یا از منوی زیر انتخاب کن..." autocomplete="off" style="padding-left: 2.5rem;">
+          <span style="position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); font-size: 1.2rem; pointer-events: none;"></span>
+          <div id="searchSuggestions"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label> فارسی /  English</label>
+          <select id="languageSelect">
+            <option value="persian">فارسی </option>
+            <option value="english">English </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>دسته‌بندی اصلی</label>
+          <select id="mainCategorySelect">
+            <option value="">بارگذاری...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>زیر دسته (اختیاری)</label>
+          <select id="subCategorySelect">
+            <option value="">همه زیردسته‌ها</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>تعداد دنبال کننده پیج</label>
+          <input type="number" id="followerInput" placeholder="مثال: 5000" value="">
+          <span class="error-message" id="followerError">لطفاً تعداد دنبال کننده پیج خود را وارد کنید</span>
+        </div>
+      </div>
+      <button class="btn-primary" id="analyzeBtn"> تحلیل و پیشنهاد هشتگ</button>
+    </div>
+
+    <div id="resultsContainer" class="results-container"></div>
+
+    <div class="card education">
+      <h2 style="margin-bottom:0.8rem;">⭐ چرا هشتگ تخصصی؟</h2>
+      <p>
+        بخش <strong>تخصصی</strong> هوشمندترین انتخاب برای رشد پیج شماست.
+        این بخش با تحلیل دقیق شرایط پیجتان، بهترین هشتگ‌ها را با بالاترین بازدهی پیشنهاد می‌دهد.
+      </p>
+      <p style="margin-top: 0.8rem;">
+        <strong>🎯 نتیجه بهتر، دیده شدن بیشتر!</strong>
+        برخلاف انتخاب دستی یا تصادفی هشتگ‌ها، بخش تخصصی با ترکیب اصولی و هدفمند،
+        شانس ورود محتوای شما به <strong>اکسپلور</strong> و جذب فالوور واقعی را چند برابر می‌کند.
+      </p>
+    </div>
+
+    <div class="card education">
+      <h2 style="margin-bottom:0.8rem;">چرا ترکیب هشتگ‌ها مهم است؟</h2>
+      <p>استفاده از هشتگ‌های پر رقابت، کم رقابت و متوسط در کنار هم می‌تواند پوشش متعادل‌تری برای محتوای شما ایجاد کند. به همین دلیل هشتگ‌ها را در چند سطح مختلف نمایش می‌دهیم.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
